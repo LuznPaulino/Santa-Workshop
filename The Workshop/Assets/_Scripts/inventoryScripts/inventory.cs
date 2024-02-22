@@ -5,6 +5,7 @@ using UnityEngine;
 public class inventory : MonoBehaviour
 {
     public inventoryItems[,] thePlayerInventory = new inventoryItems[3, 10];
+    public inventoryItems[] theHotBar = new inventoryItems[10];
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        theCurrentHotBar();
     }
 
     public void storingObjects(objectProperties theObjectToBeStored)
@@ -44,6 +45,14 @@ public class inventory : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E) && other.tag == "interactableObject")
         {
             storingObjects(other.GetComponent<objectProperties>());
+        }
+    }
+
+    public void theCurrentHotBar()
+    {
+        for (int j = 0; j < thePlayerInventory.GetLength(0); j++)
+        {
+            theHotBar[j] = thePlayerInventory[0, j];
         }
     }
 
