@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class wheat : plant
 {
+    public GameObject theWheatObject;
     public wheat()
     {
         numberOfDatesTillMaturity = 4;
         currentMaturity = 0;
         inTheGround = false;
+        thePlant = theWheatObject;
     }
 }

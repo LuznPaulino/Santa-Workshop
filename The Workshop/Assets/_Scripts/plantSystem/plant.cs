@@ -12,7 +12,7 @@ public class plant
     public int amountOfWaterDays;
     public float totalFertilityOfGround;
     public float totalTemperature;
-    public string tag;
+    public GameObject thePlant;
 
 
     public plant()
@@ -21,16 +21,16 @@ public class plant
         currentMaturity = 0;
         inTheGround = false;
         theYield = 0;
-        tag = "Seed";
+        thePlant = null;
     }
 
-    public plant(int tillMaturity, int current, bool ground, int theOutput, string theTag)
+    public plant(int tillMaturity, int current, bool ground, int theOutput, string theTag, GameObject thePlantType)
     {
         numberOfDatesTillMaturity = tillMaturity;
         currentMaturity = current;
         inTheGround = ground;
         theYield = theOutput;
-        tag = theTag;
+        thePlant = thePlantType;
     }
 
     public void increaseTheCurrentMaturity()
@@ -47,15 +47,15 @@ public class plant
     {
         if (!inTheGround)
         {
-            tag = "seed";
+            thePlant.tag = "Seed";
         }
         if(inTheGround && currentMaturity < numberOfDatesTillMaturity)
         {
-            tag = "Growing";
+            thePlant.tag = "Growing";
         }
         if (currentMaturity >= numberOfDatesTillMaturity && inTheGround)
         {
-            tag = "Adult";
+            thePlant.tag = "Adult";
             yieldCalculation();
         }
     }
