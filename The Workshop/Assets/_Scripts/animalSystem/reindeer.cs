@@ -8,7 +8,9 @@ public class reindeer : animal
 
     public reindeer()
     {
-        produce = "christmas magic";
+        produce = "";
         theAnimal = theReindeerObject;
+        maturityDays = 7;
+        currentMaturityDays = 0;
     }
 }

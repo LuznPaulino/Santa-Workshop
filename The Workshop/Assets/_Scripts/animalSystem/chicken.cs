@@ -9,5 +9,7 @@ public class chicken : animal
     {
         produce = "eggs";
         theAnimal = theChickenObject;
+        maturityDays = 3;
+        currentMaturityDays = 0;
     }
 }

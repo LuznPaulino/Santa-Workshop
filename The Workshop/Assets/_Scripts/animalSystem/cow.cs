@@ -10,5 +10,7 @@ public class cow : animal
     {
         produce = "milk";
         theAnimal = theCowObject;
+        maturityDays = 4;
+        currentMaturityDays = 0;
     }
 }
