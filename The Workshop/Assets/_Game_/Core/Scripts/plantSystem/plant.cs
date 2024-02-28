@@ -7,6 +7,8 @@ public class plant
     public int numberOfDatesTillMaturity;
     public int currentMaturity;
     public bool inTheGround;
+    // boolean for groundWatered
+    // boolean for buildingHeat 
     public int theYield;
     public int amountOfLightDays;
     public int amountOfWaterDays;
@@ -62,6 +64,7 @@ public class plant
 
     public void yieldCalculation()
     {
+        ///for the total temperature, add a boolean called heat. If the boolean is true then total tempeature would += 1 for each day. 
         theYield = Mathf.RoundToInt(((amountOfLightDays / numberOfDatesTillMaturity) + (amountOfWaterDays / numberOfDatesTillMaturity)+ ((totalFertilityOfGround / numberOfDatesTillMaturity)/100) + ((totalTemperature / numberOfDatesTillMaturity) / 100)) * numberOfDatesTillMaturity);
     }
 
