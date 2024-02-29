@@ -50,3 +50,9 @@ TagManager:
   - name: Vegetation
     uniqueID: 4023986165
     locked: 0
+  - name: Structures
+    uniqueID: 1957515361
+    locked: 0
+  - name: Character
+    uniqueID: 1267504013
+    locked: 0

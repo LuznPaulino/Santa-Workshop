@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: winter objects_63
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -1956665415, guid: dbf0fcd90f04eee4aa965e87b6a83d02, type: 3}
+  m_Sprite: {fileID: 127925914, guid: 292e8c02281f22d4480cbda4af74bb11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
